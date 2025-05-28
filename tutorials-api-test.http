@@ -1,0 +1,50 @@
+## Tutorials API Test
+
+### Create a new tutorial
+POST http://localhost:8080/api/tutorials HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Host: localhost:8080
+
+{
+  "title": "Published Tutorial 1",
+  "description": "This is a sample tutorial description",
+  "published": true
+}
+
+### Get all tutorials
+GET http://localhost:8080/api/tutorials HTTP/1.1
+Accept: application/json
+Host: localhost:8080
+
+### Get a specific tutorial by ID
+GET http://localhost:8080/api/tutorials/1 HTTP/1.1
+Accept: application/json
+Host: localhost:8080
+
+### Get all published tutorials
+GET http://localhost:8080/api/tutorials/published HTTP/1.1
+Accept: application/json
+Host: localhost:8080
+
+### Update a tutorial by ID
+PUT http://localhost:8080/api/tutorials/1 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Host: localhost:8080
+
+{
+  "title": "Updated Tutorial Title",
+  "description": "Updated description",
+  "published": false
+}
+
+### Delete a tutorial by ID
+DELETE http://localhost:8080/api/tutorials/2 HTTP/1.1
+Accept: application/json
+Host: localhost:8080
+
+### Delete all tutorials
+DELETE http://localhost:8080/api/tutorials HTTP/1.1
+Accept: application/json
+Host: localhost:8080
